@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+  }
+
+.about-flex-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    max-width: 1200px;              
+    margin: 0 auto;                 
+  }
+  
+  .profile-image {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 25%;
+  }
+  
+  .bio-container {
+    background-color: white;
+    width: 500px;
+    height: auto; /* changed from fixed height to allow content to naturally push the container's bottom boundary */
+    min-height: 500px; /* ensure the container doesn't shrink below this height */
+    border-radius: 25%;
+    text-align: left;
+    position: relative;
+    overflow: hidden; /* Prevents content from spilling out */
+    word-wrap: break-word; /* Breaks long words to the next line */
+    margin-bottom: 20px;
+  }
+  
+  
+  .copy-container {
+    width: 100%; /* adjusted for padding */
+    padding: 60px 10%; /* percentage-based padding for responsiveness */
+  }
+  
+  /* Example of a media query to adjust styles for narrower screens */
+  @media (max-width: 768px) {
+    .bio-container, .profile-image {
+      width: 90%;
+      margin: 20px auto;
+    }
+  }
+
+  /* .copy-container {
+    width: 400px;
+    position: absolute;
+    top: 60px;
+    right: 50px;
+  } */
+  
